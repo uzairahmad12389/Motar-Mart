@@ -19,8 +19,7 @@ const Dashboard = () => {
 
       <h2>Dashboard</h2>
       <div className="button-container">
-        <button className="btn"><Link to="/carlisting">Car Listing</Link></button>
-        <button className="btn"><Link to="/add-car">Add Car</Link></button>
+        
         <button className="btn"><Link to="/add-car">Add Car</Link></button>
         <button className="btn"><Link to="/carlisting">Car Listing</Link></button>
         <button className="btn"><Link to="/Compare">Compare Cars</Link></button>
