@@ -202,7 +202,7 @@ form button:hover {
         background-size: cover; /* Ensure the image covers the entire container */
         background-position: center; /* Center the background image */
         background-repeat: no-repeat; /* Prevent repetition of the image */
-        color: white; /* Make the text color stand out against the image */
+        color: white; /* Make t text color stand out against the image */
         text-align: center; /* Center the text */
       }
       
