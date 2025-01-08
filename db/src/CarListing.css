@@ -1,0 +1,123 @@
+/* Main Container Styling */
+.car-listing {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Header Styling */
+  .car-listing h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Grid Layout for Cards */
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  
+  /* Card Styling */
+  .car-card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Content Styling */
+  .car-card h2 {
+    margin: 0 0 15px;
+    color: #090b0c;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .car-card p {
+    margin: 8px 0;
+    color: #0a0808;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Price Styling */
+  .car-card .car-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d0e0d;
+    margin: 10px 0;
+  }
+  
+  /* Button Styling */
+  .car-card .details-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .car-card .details-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #003f8a);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .car-listing h1 {
+      font-size: 2rem;
+    }
+  
+    .car-card h2 {
+      font-size: 1.5rem;
+    }
+  /* Back Button Styling */
+.back-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ccc;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px; /* Adds space between submit and back button */
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #b3b3b3;
+  transform: translateY(-2px);
+}
+    .car-card .details-btn {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

@@ -1,0 +1,74 @@
+.favorite-cars-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .favorite-cars-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #160303;
+  }
+  .back-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #333;
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #020f02;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+  }
+  
+  table td {
+    background-color: #011b0f;
+  }
+  
+  table tr:nth-child(even) td {
+    background-color: #1b0909;
+  }
+ 
+
+table tr:nth-child(odd) td {
+    background-color:  #1b0909;/* Color for odd rows */
+}
+
+  table tr:hover td {
+    background-color: #011101;
+  }
+  
+  table td {
+    font-size: 14px;
+  }
+  
+  table td:first-child {
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #180303;
+    text-align: center;
+  }

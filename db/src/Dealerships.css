@@ -1,0 +1,46 @@
+.dashboard {
+  max-width: 500px; /* Restrict the width */
+  margin: 0 auto; /* Center the dashboard horizontally */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background for a professional look */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.dashboard h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333; /* Darker color for text */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Arrange buttons vertically */
+  gap: 10px; /* Add spacing between buttons */
+  max-height: 400px; /* Limit the height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.btn {
+  font-size: 18px; /* Larger text size */
+  padding: 15px 20px; /* Increase padding for larger buttons */
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff; /* Professional blue color */
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn a {
+  text-decoration: none;
+  color: white; /* Ensure the link text is white */
+  display: block; /* Ensure the entire button is clickable */
+}

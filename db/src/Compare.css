@@ -1,0 +1,90 @@
+.car-comparison-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: #2c2f33; /* Dark background */
+  color: white; /* Default text color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  color: white; /* White heading color */
+}
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
+
+.dropdown {
+  margin: 20px 0;
+}
+
+label {
+  color: white; /* White label color */
+}
+
+.error {
+  color: #ff6b6b; /* Light red for errors */
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.selected-models {
+  margin: 20px 0;
+}
+
+.compare-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.compare-btn:hover {
+  background-color: #0056b3;
+}
+
+.comparison-result {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #23272a; /* Slightly lighter dark background */
+  color: white;
+}
+
+table th,
+table td {
+  border: 1px solid #444; /* Darker border */
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #7289da; /* Discord-like blue for table headers */
+  font-weight: bold;
+  color: white; /* Ensure white text for headers */
+}
+
+table td {
+  background-color: #2c2f33; /* Match container background */
+}

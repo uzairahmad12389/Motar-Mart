@@ -1,0 +1,138 @@
+/* Body and Container Reset */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Adjusted alignment to fit more content */
+  background: linear-gradient(120deg, #2c3e50, #34495e);
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px; /* Added padding to prevent content from sticking to the edges */
+}
+
+/* Center the container with Flexbox */
+.add-car-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px; /* Reduced padding for a more compact layout */
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px; /* Added top margin for spacing */
+}
+
+/* Title Styling */
+.add-car-container h2 {
+  color: #2c3e50;
+  font-size: 1.8rem; /* Reduced font size for a more compact header */
+  margin-bottom: 15px; /* Reduced bottom margin */
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Form Input Fields */
+.add-car-container form input,
+.add-car-container form textarea,
+.add-car-container form select {
+  width: 100%;
+  padding: 10px; /* Reduced padding for tighter fields */
+  margin-bottom: 15px; /* Reduced margin between fields */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focused State */
+.add-car-container form input:focus,
+.add-car-container form textarea:focus,
+.add-car-container form select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+  background: #ffffff;
+}
+
+/* Textarea Specific */
+.add-car-container form textarea {
+  resize: vertical;
+  min-height: 80px; /* Reduced height for compactness */
+}
+
+/* Submit Button Styling */
+.add-car-container form button {
+  width: 100%;
+  padding: 12px; /* Reduced padding for a tighter button */
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #ffffff;
+  font-size: 1.1rem; /* Slightly reduced font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-car-container form button:hover {
+  background: linear-gradient(90deg, #0056b3, #003f8a);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Back Button Styling */
+.back-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ccc;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px; /* Adds space between submit and back button */
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #b3b3b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-car-container {
+    padding: 15px; /* Reduced padding */
+  }
+
+  .add-car-container h2 {
+    font-size: 1.6rem; /* Adjusted font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .add-car-container {
+    padding: 10px; /* Further reduced padding for very small screens */
+  }
+
+  .add-car-container h2 {
+    font-size: 1.4rem; /* Adjusted font size for very small screens */
+  }
+
+  .add-car-container form input,
+  .add-car-container form textarea {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .add-car-container form button {
+    font-size: 1rem; /* Reduced button font size */
+  }
+
+  label {
+    color: blue; /* Makes the label text blue */
+  }
+}

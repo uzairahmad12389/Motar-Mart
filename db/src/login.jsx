@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Auth.css';
-
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,7 +12,7 @@ const Login = () => {
         setMessage('');
 
         try {
-            const response = await fetch('http://localhost:3001/login', {
+            const response = await fetch('http://localhost:4000/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,7 +24,7 @@ const Login = () => {
             const data = await response.json();
             if (response.ok) {
                 setMessage(data.message); // Show success message
-                window.location.href = '/dashboard'; // Redirect to dashboard
+                window.location.href = '/Dashboard'; // Redirect to dashboard
             } else {
                 setError(data.error); // Show error message
             }

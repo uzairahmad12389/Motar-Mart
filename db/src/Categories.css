@@ -1,0 +1,79 @@
+.car-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .category-filter {
+    margin-bottom: 20px;
+  }
+  
+  .category-filter select {
+    padding: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: 1px solid #020202;
+    border-radius: 4px;
+  }
+  
+  .car-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .car-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .car-table th,
+  .car-table td {
+    border: 1px solid #030303;
+    padding: 10px;
+  }
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black; /* Set background color to black */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #333; /* Slightly lighter black for hover effect */
+  }
+  
+  .car-table th {
+    background: linear-gradient(90deg, #0a141f, #0e1216);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .car-table td {
+    color: #f5f6f8;
+  }
+  
+  .car-table tr:nth-child(even) {
+    background-color: #e9f5ff; /* Light blue for even rows */
+  }
+  
+  .car-table tr:nth-child(odd) {
+    background-color: #d6ebff; /* Slightly darker blue for odd rows */
+  }
+  
+  .car-table tr:hover {
+    background-color: #07090a; /* Highlighted row on hover */
+  }
+  
+  .no-cars {
+    font-size: 18px;
+    color: #f4faff;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #030303;
+  }
+  
