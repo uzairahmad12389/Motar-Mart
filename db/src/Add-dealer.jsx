@@ -11,7 +11,7 @@ const AddDealership = () => {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate(); // Initialize navigation
-
+     
   // Fetch all car models
   useEffect(() => {
     const fetchCars = async () => {

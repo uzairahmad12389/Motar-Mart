@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import img1 from './Images/car.jpeg';
 import Login from './login';
 import SignUp from './signup';
 import Dashboard from './Dashboard'; // Assuming you have a Dashboard component
@@ -17,7 +18,7 @@ const App = () => {
         <Router>
             <div className="app">
            
-
+            <img src={img1} alt="Car" className="header-image" />
                 <h1>Welcome to Our App</h1>
                 <Routes>
                     {/* Define routes */}

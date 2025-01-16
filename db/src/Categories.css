@@ -76,4 +76,36 @@
     margin-top: 20px;
     background-color: #030303;
   }
+  .car-listing {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .car-grid {
+    display: flex; /* Makes the grid a flex container */
+    flex-wrap: wrap; /* Allows wrapping to the next row if there's not enough space */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Adds space between the items */
+  }
+  
+  .car-card {
+    background-color: #f9f9f9; /* Light background color for each card */
+    border: 1px solid #ddd; /* Add a border for the card */
+    border-radius: 8px; /* Rounds the corners */
+    width: 300px; /* Fixed width for each card */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    text-align: left; /* Aligns the text inside the card */
+  }
+  
+  .car-card img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Matches card's rounded corners */
+    margin-bottom: 10px; /* Space between the image and text */
+  }
+  
+
+  
+ 
   

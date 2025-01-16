@@ -6,6 +6,7 @@ const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState(''); // State for success message
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,13 +28,17 @@ const SignUp = () => {
 
             if (response.ok) {
                 const result = await response.json();
+                setSuccess('Sign Up Successful! You can now log in.'); // Set success message
+                setError(''); // Clear any previous errors
                 console.log(result.message); // Signup successful message from backend
             } else {
                 setError('Signup failed, please try again!');
+                setSuccess(''); // Clear any previous success messages
                 console.error('Signup failed');
             }
         } catch (error) {
             setError('Error during signup, please try again!');
+            setSuccess(''); // Clear any previous success messages
             console.error('Error during signup:', error);
         }
     };
@@ -65,7 +70,13 @@ const SignUp = () => {
                 />
                 <button type="submit">Sign Up</button>
             </form>
+
+            {/* Display Success Message */}
+            {success && <p className="success">{success}</p>}
+
+            {/* Display Error Message */}
             {error && <p className="error">{error}</p>}
+
             <p>
                 Already have an account?{' '}
                 <span onClick={() => (window.location.href = '/login')}>Login</span>

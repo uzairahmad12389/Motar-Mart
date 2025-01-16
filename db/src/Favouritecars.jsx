@@ -2,6 +2,23 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Favourite.css";
+import img1 from "./Images/civic.jpeg"; // Fallback image
+
+// Function to map car names to image paths
+const getCarImage = (carName) => {
+  switch (carName.toLowerCase()) {
+    case "city":
+      return "./Images/City.jpeg";
+    case "corolla":
+      return "./Images/Corolla.jpeg";
+    case "sportage":
+      return "./Images/Sportage.jpeg";
+    case "civic":
+      return "./Images/Civic.jpeg";
+    default:
+      return img1; // Default image if no match
+  }
+};
 
 const FavoriteCars = () => {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -23,27 +40,29 @@ const FavoriteCars = () => {
   return (
     <div className="favorite-cars-container">
       <h2>Your Favorite Cars</h2>
+
+      {/* Car Listings */}
       {favoriteCars.length > 0 ? (
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Model</th>
-              <th>Price</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {favoriteCars.map((car, index) => (
-              <tr key={index}>
-                <td>{car.name}</td>
-                <td>{car.model}</td>
-                <td>{car.price}</td>
-                <td>{car.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="car-grid">
+          {favoriteCars.map((car, index) => {
+            const carImage = getCarImage(car.name); // Get the image for the car
+            return (
+              <div className="car-card" key={index}>
+                {/* Display car-specific image */}
+                <img
+                  src={carImage}
+                  alt={car.name}
+                  className="car-image"
+                  onError={(e) => e.target.src = img1} // Fallback to default image if not found
+                />
+                <h3>{car.name}</h3>
+                <p><strong>Model:</strong> {car.model}</p>
+                <p><strong>Price:</strong> ${car.price}</p>
+                <p>{car.description}</p>
+              </div>
+            );
+          })}
+        </div>
       ) : (
         <p>No favorite cars found.</p>
       )}

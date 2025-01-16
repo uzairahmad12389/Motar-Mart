@@ -1,18 +1,39 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./Categories.css";
+
+// Define the fallback image path
+import img1 from "./Images/civic.jpeg"; // Ensure you have a default image
+
+// Function to get the car image based on the car name
+const getCarImage = (carName) => {
+  switch (carName.toLowerCase()) {
+    case "city":
+      return "./Images/City.jpeg"; // Replace with actual image path for City
+    case "corolla":
+      return "./Images/Corolla.jpeg"; // Replace with actual image path for Corolla
+    case "sportage":
+      return "./Images/Sportage.jpeg"; // Replace with actual image path for Sportage
+    case "civic":
+      return "./Images/Civic.jpeg"; // Replace with actual image path for Civic
+    default:
+      return img1; // Default image if no match
+  }
+};
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
-  const [category_type, setCategoryType] = useState('SUV'); // Default to SUV
+  const [category_type, setCategoryType] = useState("SUV"); // Default to SUV
   const [category] = useState(["SUV", "sedan", "hatchback", "coupe", "convertible"]);
   const navigate = useNavigate(); // Initialize the navigate function
 
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/categories?categoryType=${category_type}`);
+        const response = await axios.get(
+          `http://localhost:4000/categories?categoryType=${category_type}`
+        );
         setCars(response.data);
       } catch (err) {
         console.error("Error fetching cars:", err);
@@ -28,47 +49,49 @@ const CarList = () => {
   };
 
   return (
-    <div className="car-list">
-      <h1>Car List</h1>
-      
-      {/* Category Filter */}
+    <div className="car-listing">
+      <h1>Car Listings</h1>
       <div className="category-filter">
         <label>Select Car Category: </label>
-        <select 
-          value={category_type} 
-          onChange={(e) => setCategoryType(e.target.value)}
-        >
+        <select value={category_type} onChange={(e) => setCategoryType(e.target.value)}>
           {category.map((category, index) => (
-            <option key={index} value={category}>{category}</option>
+            <option key={index} value={category}>
+              {category}
+            </option>
           ))}
         </select>
       </div>
 
-      {/* Display Car List */}
-      <div className="car-table-container">
+      <div className="car-grid">
         {cars.length > 0 ? (
-          <table className="car-table">
-            <thead>
-              <tr>
-                <th>Car Name</th>
-                <th>Model</th>
-                <th>Price</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cars.map((car, index) => (
-                <tr key={index}>
-                  <td>{car.name}</td>
-                  <td>{car.model}</td>
-                  <td>${car.price}</td>
-                  <td>{car.description}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          cars.map((car, index) => {
+            // Use the getCarImage function to dynamically select the image
+            const carImage = getCarImage(car.name);
+
+            return (
+              <div className="car-card" key={car._id || index}>
+                {/* Display car-specific image, fallback to default image */}
+                <img
+                  src={carImage} // Dynamic image URL
+                  alt={car.name}
+                  className="car-image"
+                  onError={(e) => {
+                    e.target.src = img1; // Fallback to default image if the car-specific image is not found
+                  }}
+                />
+                <h2>{car.name}</h2>
+                <p>
+                  <strong>Model:</strong> {car.model}
+                </p>
+                <p>
+                  <strong>Price:</strong> ${car.price}
+                </p>
+                <p>{car.description}</p>
+              </div>
+            );
+          })
         ) : (
-          <p className="no-cars">No cars available in this category.</p>
+          <p>No cars available in this category.</p>
         )}
       </div>
 
